@@ -3,8 +3,8 @@
     <h1>Add Event</h1>
     <label>Destination</label>
       <input type="text" formControlName="destination"/>
-      <div *ngIf="Destination?.invalid && Destination?.dirty "  class="alert alert-warning">
-        The destination invalid (more than 3 characters)
+      <div *ngIf="Destination?.invalid && Destination?.touched "  class="alert alert-warning">
+        The destination provided is invalid. Please enter a destination with at least 3 characters.
       </div>
       <label>Image url</label>
       <input type="text" formControlName="imgUrl"/>
@@ -12,6 +12,7 @@
       <input type="number" formControlName="price" />
       <label>Event Date</label>
       <input type="date" formControlName="date"/>
+
       <div class="center">
         <button (click)="loginForm.reset()" color="warn" class="btn"   mat-flat-button> Reset</button>
       <button (click)="ajoutdata()" color="primary" class="btn" [disabled]="!loginForm.valid"   mat-flat-button> <mat-icon>add</mat-icon> Add</button>

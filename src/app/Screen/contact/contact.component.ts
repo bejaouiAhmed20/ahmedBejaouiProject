@@ -21,12 +21,18 @@ export class ContactComponent implements OnInit{
     {
       fullName:[,[Validators.required,Validators.minLength(5)]],
       email: [,[Validators.required,Validators.email]],
-      message: [,[Validators.required,Validators.minLength(4)]],
+      message: [,[Validators.required,Validators.minLength(5)]],
     }
   )
-  fullName!:string;
-  email!:string;
-  message!:string;
+  public get FullName(){
+    return this.contactForm.get('fullName')
+  }
+  public get Email(){
+    return this.contactForm.get('email')
+  }
+  public get Message(){
+    return this.contactForm.get('message')
+  }
   randomnb():number {
     return Math.floor(Math.random()*1000);
   }
@@ -47,10 +53,8 @@ export class ContactComponent implements OnInit{
   }
   
   addContact(){
-    this.fullName=this.contactForm.get('fullName')?.value
-    this.email=this.contactForm.get('email')?.value
-    this.message=this.contactForm.get('message')?.value
-    this.contactService.addContact(new Contact (this.idGenerater(),this.fullName,this.email,this.message)).subscribe(
+
+    this.contactService.addContact(new Contact (this.idGenerater(),this.FullName?.value,this.Email?.value,this.Message?.value)).subscribe(
       data=>{
         alert("Contact Added");
         this.contactForm.reset()
