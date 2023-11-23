@@ -1,0 +1,15 @@
+
+    <section>
+
+            <h1>Event Information</h1>
+        <div >
+            <ul class="list-group">
+                <li class="list-group-item">Event Id : {{tab.id}}</li>
+                <li class="list-group-item">Destination : {{tab.destination| titlecase}}</li>
+                <li class="list-group-item">Event Date : {{tab.date | date:'mediumDate'}}</li>
+                <li class="list-group-item">Event Price {{tab.price | number:"0.2"}} DT</li>
+                <li class="list-group-item">Number of registered people : {{tab.nbRejondre }} </li>
+            </ul>
+        </div>
+    </section>
+

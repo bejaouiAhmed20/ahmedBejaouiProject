@@ -1,0 +1,22 @@
+.input{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: fit-content;
+    padding: 5px 10px;
+    background-color: #E7FEFF;
+    border-radius: 18px;
+    margin: 10px auto;
+}
+input{
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+}
+i{
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}

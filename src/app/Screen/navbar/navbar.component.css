@@ -1,0 +1,35 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+    z-index: 999;
+    padding: 5px 20px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    
+}
+h1{
+    font-weight: 24px;
+    color: #007AFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+.icon-display {
+    color: #007AFF;
+    transform: scale(1.4);
+ }
+li{
+    display: inline-block;
+    margin: 0px 20px;
+    font-size: 20px;
+    color: #007AFF;
+    cursor: pointer;
+}
+.actif{
+    text-decoration: underline #007AFF;
+    text-underline-offset: 10px;
+}

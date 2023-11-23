@@ -1,0 +1,28 @@
+<div class="input">
+    <button  mat-icon-button (click)="searchCheck(rech.value)"><mat-icon >search</mat-icon></button>
+    <input class="inputField" type="text" placeholder="Search  For Events" #rech>
+    <button color="warn" *ngIf="!bool" (click)="back()" mat-flat-button>Cancel</button>
+</div>
+<div *ngIf="!bool"  class="container">
+    <div class="list-group">
+        <div class="center list-group-item">
+            <button (click)="delete(EventItem.id)" color="warn" mat-flat-button><mat-icon>delete</mat-icon> Delete</button>
+            <button  (click)="editEvent()"  color="warn" style="background-color: #007AFF;" mat-flat-button [disabled]="eventForm.invalid || !eventForm.dirty"><mat-icon>save</mat-icon> Save</button>
+            <button (click)="edit()"   color="warn" style="background-color: green;" mat-flat-button ><mat-icon>edit</mat-icon> Edit</button>
+        </div> 
+                <form [formGroup]="eventForm" class="list-group-item">
+                <h4 >Event ID  : <br> <input  class="inputChange" type="text"  formControlName="id" ></h4>
+                <h4 >Destination : <br> <input class="inputChange" type="text"  formControlName="destination"> </h4>
+                <h4 >Image Url : <br> <input  class="inputChange" type="text"   formControlName="image"></h4>
+                <h4 >Event Date (dd/mm/yyyy) : <br> <input class="inputChange" type="text"  formControlName="date"></h4>
+                <h4 > Number of registered people : <br> <input type="number" class="inputChange" [value]="EventItem.nbRejondre"  formControlName="nbRejondre"></h4>
+                <h4 > Price : <br> <input type="number" class="inputChange"  formControlName="price"></h4>
+                <h4 >State (true or false): <br> <input type="text" class="inputChange"   formControlName="etat"></h4>
+                </form>
+        </div>
+    </div>
+    <div class="searchEvent" *ngIf="bool">
+    <h1 >Search for an event to edit or delete.</h1>
+
+        <img src="../../../assets/search.png" >
+    </div>  

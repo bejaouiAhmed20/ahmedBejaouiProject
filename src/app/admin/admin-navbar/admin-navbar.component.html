@@ -1,0 +1,12 @@
+<section>
+    <h1 routerLink="/home">TravelClub</h1>
+    <mat-menu #matmenu>
+      <button routerLinkActive="actif" routerLink="add" mat-menu-item><mat-icon>add_circle_outline</mat-icon> Add Events</button>
+      <button routerLinkActive="actif" routerLink="edit&delete" mat-menu-item> <mat-icon>create</mat-icon> Edit & Delete</button>
+      <button routerLinkActive="actif" routerLink="profile" mat-menu-item> <mat-icon>account_circle</mat-icon>profile</button>
+      <button routerLinkActive="actif" routerLink="contacts" mat-menu-item> <mat-icon> email</mat-icon>Contacts</button>
+      <button routerLinkActive="actif" routerLink="/home" (click)="logout()" mat-menu-item><mat-icon>power_settings_new</mat-icon> Log out</button>
+    </mat-menu>
+    <button color="primary" style="background-color: #007AFF;" mat-flat-button [matMenuTriggerFor]="matmenu"><mat-icon>keyboard_arrow_down</mat-icon> Menu</button>
+   </section>
+  

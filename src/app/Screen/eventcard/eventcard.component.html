@@ -1,0 +1,37 @@
+<div class="container" >
+    <div class="name">
+        <div class="dateimagename">
+            <div class="imageadmin">
+                <div class="circle"></div>
+                <h4>Admin</h4>
+            </div>
+            <div>
+                <h4>
+                    {{tab.date | date:'mediumDate'}}
+                </h4>
+            </div>
+        </div>
+        <div>
+            <h4>
+                Destination : {{ tab.destination | titlecase}}
+            </h4>
+        </div>
+       
+    </div>
+    <div class="image">
+        <img [src]="tab.image" >
+    </div>
+    <div class="Register">
+        <h4>{{tab.etat ? "You Can Register Now ": "The Event Has Ended" }}</h4>
+        <div >
+            <button a (click)="bool()" class="btn btn-primary">Info</button>
+            <button  [ngClass]="{'btn':true,'btn-success':tab.etat,'btn-secondary':!tab.etat}" [disabled]="!tab.etat" (click)="onModifier(tab)">Register</button>
+        </div>
+    </div>
+    <div *ngIf="etat" class="info">
+        <div class="flex">
+        <app-info  [tab]="tab"></app-info>
+        <button (click)="cancel()" color="warn" mat-flat-button>Cancel</button>
+        </div>
+    </div>
+</div>

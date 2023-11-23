@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+form{
+    border: 3px solid #007AFF;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 122, 255, .2) 0px 4px 8px, rgba(0, 122, 255, .2) 0px 4px 8px;}
+input{
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #d1d1d1
+}
+input:focus{
+    outline: none;
+}
+h1{
+    color: #007AFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+label{
+    font-size: 16px;
+    margin-top:10px ;
+    color: #1d1d1d;
+}
+.center{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+.btn{
+    width: 150px;
+    margin-top: 40px;
+}
+input.ng-valid{
+    border-right: 6px  solid green;
+}
+input.ng-invalid{
+    border-right: 6px  solid red;
+}

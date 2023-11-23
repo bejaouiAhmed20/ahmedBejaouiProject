@@ -1,0 +1,30 @@
+<div class="container">
+<section>
+    <h1>Profile</h1>
+    <ul >
+      <li *ngFor="let acc of accounts">
+        <ul class="list-group">
+          <li class="list-group-item">
+            Username : 
+            <div>
+                <input type="text" [value]="acc.username" [disabled]="true"/>
+            </div>
+          </li>
+          <li class="list-group-item">
+           Password :
+           <div>
+                <input type="text" [value]="acc.password" [disabled]="actif" #pass/>
+                <button (click)="editPassword()" color="warn" style="background-color: green;" mat-flat-button><mat-icon>edit</mat-icon>Edit</button>
+            </div>
+          </li>
+        </ul>
+        <div class="center">
+        <button (click)="onModifier(acc,pass.value)" class="btn" color="warn" mat-flat-button>Save</button>  
+      </div>
+      </li>
+
+    </ul>
+
+
+  </section>
+</div>

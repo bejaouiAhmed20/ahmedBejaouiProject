@@ -1,0 +1,61 @@
+form{
+    border: 2px solid black;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #007AFF;
+    border-radius: 20px;
+    padding: 20px 50px;
+    box-shadow: rgba(0, 122, 255, .2) 0px 4px 8px, rgba(0, 122, 255, .2) 0px 4px 8px;
+}
+input{
+    align-self: center;
+    width: 400px;
+    display: block;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    border:1px solid #d1d1d1
+}
+input:focus{
+    outline: none;
+    border: 1px solid #007AFF;
+}
+h1{
+    color: #007AFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+label{
+    font-size: 16px;
+    margin-top:10px ;
+    color: #1d1d1d;
+}
+.btn{
+    width: 150px;
+    margin: 10px;
+}
+p{
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    color: gray;
+    margin: auto;
+}
+input.ng-valid{
+    border-right: 6px  solid green;
+}
+input.ng-invalid{
+    border-right: 6px  solid red;
+}
+.center{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}

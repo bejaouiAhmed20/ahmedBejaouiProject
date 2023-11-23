@@ -1,0 +1,17 @@
+
+<div class="container">
+    <h1>All Conacts</h1>
+    <ul class="list-group">
+        <li *ngFor="let t of tab" class="list-group-item">
+            <div>
+                <h4>Message ID : {{t.id }}</h4>
+                <h4>Full Name : {{t.fullName | titlecase}}</h4>
+                <h4>Mail : {{t.email}}</h4>
+                <h4> Message : {{t.message | decoration}}</h4>
+            </div>
+            <button (click)="deleteConatct(t.id)" color="warn" mat-flat-button><mat-icon>delete</mat-icon> Delete</button>
+            
+        </li>
+    </ul>
+    </div>
+    

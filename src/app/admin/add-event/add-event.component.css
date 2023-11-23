@@ -1,0 +1,51 @@
+form{
+    margin: 20px auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #007AFF;
+    border-radius: 20px;
+    padding: 20px 50px;
+    box-shadow: rgba(0, 122, 255, .2) 0px 4px 8px, rgba(0, 122, 255, .2) 0px 4px 8px;
+}
+input{
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border:1px solid #d1d1d1
+}
+input:focus{
+    outline: none;
+    border: 1px solid #007AFF;
+}
+h1{
+    color: #007AFF;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+label{
+    font-size: 16px;
+    margin-top:10px ;
+    color: #1d1d1d;
+}
+.center{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.btn{
+    font-size: 16px;
+    width: 150px;
+    height: 41px;
+    margin: 20px;
+}
+input.ng-valid{
+    border-right: 6px  solid #007AFF;
+}
+input.ng-invalid{
+    border-right: 6px  solid orange;
+}
