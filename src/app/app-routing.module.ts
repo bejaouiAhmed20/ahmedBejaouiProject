@@ -11,10 +11,12 @@ import { authGuard } from './auth.guard';
 import { ChangeEventComponent } from './admin/change-event/change-event.component';
 import { ContactComponent } from './Screen/contact/contact.component';
 import { AdminContactComponent } from './admin/admin-contact/admin-contact.component';
+import { AboutUsComponent } from './Screen/about-us/about-us.component';
 
 const routes: Routes = [
   {path:'home',component:HomeScreenComponent ,children:[
     {path:'events',component:AllcardComponent},
+    {path:'aboutUs',component:AboutUsComponent},
     {path:'contact',component:ContactComponent},
     {path:'',redirectTo:'events',pathMatch:'full'}
     ]},

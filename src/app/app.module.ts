@@ -25,6 +25,7 @@ import { ChangeEventComponent } from './admin/change-event/change-event.componen
 import { ContactComponent } from './Screen/contact/contact.component';
 import { DecorationPipe } from './decoration.pipe';
 import { AdminContactComponent } from './admin/admin-contact/admin-contact.component';
+import { AboutUsComponent } from './Screen/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { AdminContactComponent } from './admin/admin-contact/admin-contact.compo
     ContactComponent,
     DecorationPipe,
     AdminContactComponent,
+    AboutUsComponent,
     
   ],
   imports: [
