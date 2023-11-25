@@ -1,13 +1,16 @@
 <div class="div">
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
   <h1>Log In</h1>
   <label>Username</label>
   <input type="text" formControlName="username">
+  <div *ngIf="Username?.invalid &&  Username?.dirty" class="alert alert-info">
+    Your full name must be more than 3 characters
+</div>
   <label>Password</label>
   <input type="password" formControlName="password">
   <div class="center" >
     <button routerLink="/home/events" class="btn" color="warn" mat-flat-button><mat-icon>keyboard_return</mat-icon>	 Back</button>
-  <button   (click)="submit()" [disabled]="!loginForm.valid"  class="btn" color="primary" mat-flat-button>	<mat-icon>check_circle_outline</mat-icon> Submit</button>
+  <button type="submit"   [disabled]="!loginForm.valid"  class="btn" color="primary" mat-flat-button>	<mat-icon>check_circle_outline</mat-icon> Submit</button>
 </div>
 </form>
 </div>

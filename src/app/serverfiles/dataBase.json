@@ -4,7 +4,7 @@
       "id": 194,
       "destination": "kelibia",
       "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/341231282.jpg?k=ea79a2cc7f5a8a5591b82333b0a6e3696a97080b980aa70f71dbc7ab7033cf8a&o=&hp=1",
-      "etat": false,
+      "etat": true,
       "date": "2023-10-10",
       "nbRejondre": 0,
       "price": 40

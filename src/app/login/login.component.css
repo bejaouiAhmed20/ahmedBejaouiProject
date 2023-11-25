@@ -17,7 +17,7 @@ form{
 input{
     border-radius: 8px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border:1px solid #d1d1d1
 }
 input:focus{
@@ -34,7 +34,7 @@ h1{
 }
 label{
     font-size: 16px;
-    margin-top:10px ;
+    margin-top:20px ;
     color: #1d1d1d;
 }
 .center{

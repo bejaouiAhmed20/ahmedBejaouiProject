@@ -3,7 +3,6 @@ import { AccountService } from '../services/account.service';
 import { Account } from '../Classes/account';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import { EventsService } from '../services/events.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -16,15 +15,15 @@ export class LoginComponent  implements OnInit{
 constructor(private authService:AuthService,private router:Router,private accountService:AccountService,private fb:FormBuilder){}
 loginForm:FormGroup=this.fb.nonNullable.group(
   {
-    username:[,[Validators.required]],
+    username:[,[Validators.required,Validators.minLength(3)]],
     password:[,[Validators.required]]
   }
 )
 public get Username(){
-  return this.loginForm.get('username')?.value
+  return this.loginForm.get('username')
 }
 public get Password(){
-  return this.loginForm.get('password')?.value
+  return this.loginForm.get('password')
 }
 loopTable(x:string,y:string){
   for(let t of this.tab){
@@ -35,12 +34,12 @@ loopTable(x:string,y:string){
   return false;
 }
 submit(){
-  if(this.loopTable(this.Username, this.Password)){
+  if(this.loopTable(this.Username?.value, this.Password?.value)){
     this.authService.Adminlogin();
     this.router.navigate(['/admin'])
   }
   else{
-    alert(' Somting Wrong ! Check your information  ')
+    alert(' Somthing Wrong ! Check your information  ')
   }
 }
   ngOnInit(): void {

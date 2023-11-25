@@ -18,7 +18,7 @@ export class ChangeEventComponent implements OnInit{
       id: [,[Validators.required]],
       destination:[,[Validators.required,Validators.minLength(4)]],
       image:[,[Validators.required,Validators.minLength(4)]],
-      etat:[,[Validators.required,Validators.minLength(4)]],
+      etat:[],
       date:[,[Validators.required]],
       nbRejondre:[,[Validators.required]],
       price:[,[Validators.required]],
@@ -41,7 +41,7 @@ export class ChangeEventComponent implements OnInit{
    }
    search(x:string){
     for(let t of this.events){
-      if(x.toLocaleLowerCase()==t.destination.toLocaleLowerCase() || Number(x)==t.id){
+      if(x.toLocaleLowerCase()==t.destination.toLocaleLowerCase() || Number(x)==t.id ||x.toLocaleLowerCase()==t.id.toString()+t.destination.toLocaleLowerCase() ||x.toLocaleLowerCase()==t.destination.toLocaleLowerCase()+t.id.toString()){
         this.bool=false;
         this.EventItem=t
         if (this.EventItem) {

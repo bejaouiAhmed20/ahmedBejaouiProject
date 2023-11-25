@@ -26,7 +26,7 @@ export class AllcardComponent implements OnInit {
  }
  search(x:string){
   for(let t of this.tab){
-    if(x.toLowerCase()==t.destination.toLowerCase() || Number(x)==t.id){
+    if(x.toLocaleLowerCase()==t.destination.toLocaleLowerCase() || Number(x)==t.id ||x.toLocaleLowerCase()==t.id.toString()+t.destination.toLocaleLowerCase() ||x.toLocaleLowerCase()==t.destination.toLocaleLowerCase()+t.id.toString()){
       this.bool=false;
       this.EventItem=t
       return true

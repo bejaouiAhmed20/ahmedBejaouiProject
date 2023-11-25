@@ -17,7 +17,14 @@
                 <h4 >Event Date (dd/mm/yyyy) : <br> <input class="inputChange" type="text"  formControlName="date"></h4>
                 <h4 > Number of registered people : <br> <input type="number" class="inputChange" [value]="EventItem.nbRejondre"  formControlName="nbRejondre"></h4>
                 <h4 > Price : <br> <input type="number" class="inputChange"  formControlName="price"></h4>
-                <h4 >State (true or false): <br> <input type="text" class="inputChange"   formControlName="etat"></h4>
+                <h4 >State: </h4>
+                <div class="center">
+                <mat-button-toggle-group formControlName="etat" >
+                    <mat-button-toggle [value]=true [checked]="EventItem.etat">True</mat-button-toggle>
+                    <mat-button-toggle [value]=false [checked]="!EventItem.etat">False</mat-button-toggle>
+                  </mat-button-toggle-group>
+                </div>
+                
                 </form>
         </div>
     </div>
