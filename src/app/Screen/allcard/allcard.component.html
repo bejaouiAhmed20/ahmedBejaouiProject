@@ -4,10 +4,13 @@
     <button color="warn" *ngIf="!bool" (click)="back()" mat-flat-button>Cancel</button>
 </div>
 
-    <div *ngIf="bool">
+    <div class="div" *ngIf="bool">
         <app-eventcard  *ngFor="let item of tab" [tab]="item"></app-eventcard>
     </div>
-    <app-eventcard *ngIf="!bool" [tab]="EventItem"></app-eventcard>
+    <div class="div" *ngIf="!bool">
+        <app-eventcard  [tab]="EventItem"></app-eventcard>
+    </div> 
 
+<app-footer></app-footer>
 
 

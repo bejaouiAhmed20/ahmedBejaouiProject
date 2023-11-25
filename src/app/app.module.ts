@@ -7,7 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HomeScreenComponent } from './Screen/home-screen/home-screen.component';
 import { NavbarComponent } from './Screen/navbar/navbar.component';
-import { MainSectionComponent } from './Screen/main-section/main-section.component';
 import { EventcardComponent } from './Screen/eventcard/eventcard.component';
 import { AllcardComponent } from './Screen/allcard/allcard.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -26,6 +25,7 @@ import { ContactComponent } from './Screen/contact/contact.component';
 import { DecorationPipe } from './decoration.pipe';
 import { AdminContactComponent } from './admin/admin-contact/admin-contact.component';
 import { AboutUsComponent } from './Screen/about-us/about-us.component';
+import { FooterComponent } from './Screen/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,6 @@ import { AboutUsComponent } from './Screen/about-us/about-us.component';
     LoginComponent,
     HomeScreenComponent,
     NavbarComponent,
-    MainSectionComponent,
     EventcardComponent,
     AllcardComponent,
     AdminHomeComponent,
@@ -46,6 +45,7 @@ import { AboutUsComponent } from './Screen/about-us/about-us.component';
     DecorationPipe,
     AdminContactComponent,
     AboutUsComponent,
+    FooterComponent,
     
   ],
   imports: [

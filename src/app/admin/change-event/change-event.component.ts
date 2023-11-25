@@ -76,7 +76,8 @@ export class ChangeEventComponent implements OnInit{
   delete(id:number){
     this.eventsService.deleteEvents(id).subscribe(
       data=>{
-        this.events=this.events.filter(e=>e.id!=id);
+        this.bool=true;
+        alert(`Event ${id} has been Deleted`)
       }
     )
   }
