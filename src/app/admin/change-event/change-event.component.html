@@ -7,7 +7,7 @@
     <div class="list-group">
         <div class="center list-group-item">
             <button (click)="delete(EventItem.id)" color="warn" mat-flat-button><mat-icon>delete</mat-icon> Delete</button>
-            <button  (click)="editEvent()"  color="warn" style="background-color: #007AFF;" mat-flat-button [disabled]="eventForm.invalid || !eventForm.dirty"><mat-icon>save</mat-icon> Save</button>
+            <button  (click)="editEvent()"  color="warn" style="background-color: #007AFF;" mat-flat-button [disabled]="eventForm.invalid || !eventForm.dirty || !Etat?.dirty"><mat-icon>save</mat-icon> Save</button>
             <button (click)="edit()"   color="warn" style="background-color: green;" mat-flat-button ><mat-icon>edit</mat-icon> Edit</button>
         </div> 
                 <form [formGroup]="eventForm" class="list-group-item">

@@ -73,6 +73,9 @@ export class ChangeEventComponent implements OnInit{
       }
     )
   }
+  public get Etat(){
+    return this.eventForm.get('etat')
+  }
   delete(id:number){
     this.eventsService.deleteEvents(id).subscribe(
       data=>{
