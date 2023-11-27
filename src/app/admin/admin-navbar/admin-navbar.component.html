@@ -1,6 +1,7 @@
 <section>
     <h1 routerLink="/home">TravelClub</h1>
     <mat-menu #matmenu>
+      <button routerLinkActive="actif" routerLink="allEvents" mat-menu-item> <mat-icon>event</mat-icon>All Events</button>
       <button routerLinkActive="actif" routerLink="add" mat-menu-item><mat-icon>add_circle_outline</mat-icon> Add Events</button>
       <button routerLinkActive="actif" routerLink="edit&delete" mat-menu-item> <mat-icon>create</mat-icon> Edit & Delete</button>
       <button routerLinkActive="actif" routerLink="profile" mat-menu-item> <mat-icon>account_circle</mat-icon>profile</button>

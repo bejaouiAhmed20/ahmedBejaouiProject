@@ -26,6 +26,8 @@ import { DecorationPipe } from './decoration.pipe';
 import { AdminContactComponent } from './admin/admin-contact/admin-contact.component';
 import { AboutUsComponent } from './Screen/about-us/about-us.component';
 import { FooterComponent } from './Screen/footer/footer.component';
+import { AllEventsComponent } from './admin/all-events/all-events.component';
+import { AdminCardComponent } from './admin/admin-card/admin-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,9 @@ import { FooterComponent } from './Screen/footer/footer.component';
     AdminContactComponent,
     AboutUsComponent,
     FooterComponent,
+    AllEventsComponent,
+    AdminCardComponent,
+
     
   ],
   imports: [

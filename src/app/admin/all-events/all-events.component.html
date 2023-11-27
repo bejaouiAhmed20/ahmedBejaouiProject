@@ -1,0 +1,19 @@
+<div class="input">
+    <button  mat-icon-button (click)="searchCheck(rech.value)"><mat-icon >search</mat-icon></button>
+    <input type="text" placeholder="Search  For Events" #rech>
+    <button color="warn" *ngIf="!bool" (click)="back()" mat-flat-button>Cancel</button>
+</div>
+<div class="container">
+    <h1>All Events</h1>
+    <ul class="list-group" *ngIf="bool">
+        <li *ngFor="let t of tab" class="list-group-item">
+            <app-admin-card [tab]="t"></app-admin-card>
+        </li>
+    </ul>
+    <ul class="list-group" *ngIf="!bool">
+        <li *ngFor="let t of tabSerach" class="list-group-item">
+            <app-admin-card [tab]="t"></app-admin-card>
+            
+        </li>
+    </ul>
+</div>

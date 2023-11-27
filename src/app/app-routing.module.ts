@@ -12,6 +12,7 @@ import { ChangeEventComponent } from './admin/change-event/change-event.componen
 import { ContactComponent } from './Screen/contact/contact.component';
 import { AdminContactComponent } from './admin/admin-contact/admin-contact.component';
 import { AboutUsComponent } from './Screen/about-us/about-us.component';
+import { AllEventsComponent } from './admin/all-events/all-events.component';
 
 const routes: Routes = [
   {path:'home',component:HomeScreenComponent ,children:[
@@ -25,7 +26,8 @@ const routes: Routes = [
       {path:'profile',component:ProfilComponent},
       {path:'contacts',component:AdminContactComponent},
       {path:'edit&delete',component:ChangeEventComponent},
-      {path:'',redirectTo:'add',pathMatch:'full'}
+      {path:'allEvents',component:AllEventsComponent},
+      {path:'',redirectTo:'allEvents',pathMatch:'full'}
     ]},
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'login',component:LoginComponent},
