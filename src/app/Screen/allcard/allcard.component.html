@@ -8,7 +8,9 @@
         <app-eventcard  *ngFor="let item of tab" [tab]="item"></app-eventcard>
     </div>
     <div class="div" *ngIf="!bool">
-        <app-eventcard  [tab]="EventItem"></app-eventcard>
+        <div *ngFor="let t of tabSerach">
+        <app-eventcard  [tab]="t"></app-eventcard>
+        </div>
     </div> 
 
 <app-footer></app-footer>

@@ -33,6 +33,7 @@ export class ChangeEventComponent implements OnInit{
   }
   edit(){
     this.eventForm.enable()
+    this.Id?.disable()
   }
   searchCheck(x:string){
     if(!this.search(x)){
@@ -75,6 +76,9 @@ export class ChangeEventComponent implements OnInit{
   }
   public get Etat(){
     return this.eventForm.get('etat')
+  }
+  public get Id(){
+    return this.eventForm.get('id')
   }
   delete(id:number){
     this.eventsService.deleteEvents(id).subscribe(

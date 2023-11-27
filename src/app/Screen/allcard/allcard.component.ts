@@ -9,7 +9,7 @@ import { EventsService } from 'src/app/services/events.service';
 })
 export class AllcardComponent implements OnInit {
   tab:Events[] = []
-  EventItem!:Events
+  tabSerach:Events[] = []
   bool=true;
   constructor(private eventsService:EventsService){}
 
@@ -20,21 +20,23 @@ export class AllcardComponent implements OnInit {
     })
  }
  searchCheck(x:string){
-  if(!this.search(x)){
+  if(this.search(x)==0){
     alert("No Results ! ")
   }
  }
  search(x:string){
   for(let t of this.tab){
     if(x.toLocaleLowerCase()==t.destination.toLocaleLowerCase() || Number(x)==t.id ||x.toLocaleLowerCase()==t.id.toString()+t.destination.toLocaleLowerCase() ||x.toLocaleLowerCase()==t.destination.toLocaleLowerCase()+t.id.toString()){
-      this.bool=false;
-      this.EventItem=t
-      return true
+      this.bool=false
+      this.tabSerach.push(t)
     }
   }
-  return false
+  return this.tabSerach.length
 }
 back(){
+  for(let t of this.tab){
+    this.tabSerach.shift()
+  }
   this.bool=true;
 }
 }
